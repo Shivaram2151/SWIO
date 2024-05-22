@@ -53,8 +53,8 @@ app.post("/create-checkout-session", async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/Error",
+      success_url: "https://swio-frontend-beta.vercel.app/success",
+      cancel_url: "https://swio-frontend-beta.vercel.app/Error",
     });
     console.log(session);
     res.json({ url: session.url, session: session });
